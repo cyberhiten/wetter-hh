@@ -1,0 +1,91 @@
+<!doctype html><html lang='en'><head><meta charset='utf-8'><meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; img-src data:; base-uri 'none'; form-action 'none'"><meta name='viewport' content='width=device-width,initial-scale=1,viewport-fit=cover'><meta name='color-scheme' content='light dark'><meta name='theme-color' content='#F2F5F9' media='(prefers-color-scheme: light)'><meta name='theme-color' content='#0C131B' media='(prefers-color-scheme: dark)'><title>Wetter | Weekend hike weather | Archive</title><style>
+:root{color-scheme:light dark;--bg:#F2F5F9;--panel:#fff;--border:#D6DEE8;--text:#1B2530;--muted:#5B6B7F;--accent:#0066CC;
+--good:#1D7A6B;--fair:#B25000;--poor:#C4271E;--unk:#98A5B5;--row:#F6F8FB;--chip:#E6EDF5;--ink-on-heat:#10202E;--on-accent:#fff;--r:14px}
+@media(prefers-color-scheme:dark){:root{--bg:#0C131B;--panel:#141E29;--border:#263445;--text:#EAF0F6;--muted:#8FA2B7;
+--accent:#3B9BFF;--good:#34C7A0;--fair:#FFB340;--poor:#FF6B60;--unk:#6B7C90;--row:#1A2633;--chip:#223245;--ink-on-heat:#fff;--on-accent:#04121F}}
+*{box-sizing:border-box}html{font-size:15px;scroll-behavior:smooth;-webkit-text-size-adjust:100%;scroll-padding-top:56px}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{margin:0;background:var(--bg);color:var(--text);font:1rem/1.4 -apple-system,BlinkMacSystemFont,"SF Pro Text","Segoe UI",Roboto,sans-serif;
+-webkit-font-smoothing:antialiased;-webkit-tap-highlight-color:transparent}
+a{color:var(--accent)}a:focus-visible,summary:focus-visible{outline:2px solid var(--accent);outline-offset:2px;border-radius:6px}
+.wrap{max-width:1120px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left));padding-right:max(16px,env(safe-area-inset-right))}
+.hd{position:sticky;top:0;z-index:10;background:var(--bg);background:color-mix(in srgb,var(--bg) 78%,transparent);
+-webkit-backdrop-filter:saturate(180%) blur(18px);backdrop-filter:saturate(180%) blur(18px);border-bottom:1px solid var(--border);
+padding-top:env(safe-area-inset-top)}
+.hdrow{display:flex;align-items:center;gap:10px;min-height:48px}
+.logo{flex:none;width:26px;height:26px;border-radius:7px;background:var(--accent);color:var(--on-accent);display:grid;place-items:center;font-weight:800;font-size:.95rem}
+h1{margin:0;flex:none;font-size:1.3rem;font-style:italic;font-weight:800;letter-spacing:-.03em;line-height:1}
+.nav{margin-left:auto;display:flex;gap:2px;overflow-x:auto;white-space:nowrap;scrollbar-width:none}.nav::-webkit-scrollbar{display:none}
+.nav a{text-decoration:none;font-size:.88rem;padding:12px 9px;font-weight:500}
+.intro{padding-top:10px;padding-bottom:2px}.lead{color:var(--muted);font-size:.9rem}
+.meta{font-size:.8rem;color:var(--muted);margin-top:2px}.meta b{color:var(--text);font-weight:600}
+.how{display:flex;flex-wrap:wrap;gap:2px 14px;font-size:.8rem;color:var(--muted);margin-top:6px}.how span{display:inline-flex;align-items:center;gap:5px}
+.dot{display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--unk)}
+.dot.good{background:var(--good)}.dot.fair{background:var(--fair)}.dot.poor{background:var(--poor)}
+.lbl,th{font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);font-weight:600}
+.card{background:var(--panel);border:1px solid var(--border);border-radius:var(--r);padding:12px 14px;margin:10px 0;box-shadow:0 1px 2px rgba(0,0,0,.04)}
+.ch{display:flex;justify-content:space-between;align-items:flex-start;gap:10px;flex-wrap:wrap}
+h2{margin:0;font-size:1.05rem;font-weight:700;letter-spacing:-.01em}.when{font-size:1.4rem;font-weight:800;letter-spacing:-.03em;line-height:1.15}
+.sub{color:var(--muted);font-size:.8rem}.kpis{display:flex;gap:18px;flex-wrap:wrap}
+.kpi{text-align:right;line-height:1.15}.kpi b{display:block;font-size:1.45rem;font-weight:700;letter-spacing:-.03em}
+.kpi small{color:var(--muted);font-size:.74rem;display:inline-block;max-width:22ch}
+.chip{display:inline-flex;align-items:center;min-height:24px;background:var(--chip);color:var(--accent);padding:3px 11px;border-radius:999px;font-size:.78rem;text-decoration:none;margin-left:3px}
+.mut,small{color:var(--muted)}
+.warn{background:var(--chip);color:var(--text);border:1px solid var(--border);padding:8px 12px;border-radius:10px;margin:10px 0}
+.warn.bad{color:var(--poor);border-color:var(--poor)}
+.sc{overflow-x:auto;-webkit-overflow-scrolling:touch}table{border-collapse:collapse;width:100%}
+th{text-align:left;padding:3px 6px;border-bottom:1px solid var(--border)}
+td{padding:5px 6px;border-bottom:1px solid var(--border);white-space:nowrap;font-size:.88rem}tr:last-child td{border-bottom:0}
+.num{font-variant-numeric:tabular-nums}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);clip-path:inset(50%);white-space:nowrap}
+.sb{display:inline-block;width:44px;height:5px;border-radius:3px;background:var(--border);overflow:hidden;vertical-align:middle;margin-right:5px}
+.sb i{display:block;height:100%;background:var(--unk)}.sb i.good{background:var(--good)}.sb i.ok{background:var(--fair)}.sb i.bad{background:var(--poor)}
+.ic{font-size:1.05rem;vertical-align:middle;margin-right:3px;font-family:"Apple Color Emoji","Segoe UI Emoji","Noto Color Emoji",sans-serif}
+.rib{display:flex;gap:12px;align-items:flex-start;margin-top:8px}.rday{flex:var(--n) 1 0;min-width:0}
+.rdh{font-size:.9rem;text-align:center;padding-bottom:2px}.rdh b{color:var(--accent);letter-spacing:.08em;margin-right:3px}
+.rdh>span{display:block;font-size:.74rem;color:var(--muted)}
+table.rt{border-collapse:separate;border-spacing:2px;table-layout:fixed}.rt th{border:0;padding:1px 0;text-align:center}
+.rt th.rowh{text-transform:none;letter-spacing:0;font-size:.82rem;color:var(--text);text-align:left;width:5.6rem;padding-right:6px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.rday:not(:first-child) .rowh{display:none}
+td.rc{--h:var(--row);--hd:var(--row);text-align:center;background:var(--h);color:var(--ink-on-heat);border-radius:8px;padding:3px 0;border:0;line-height:1.1}
+td.rc .ic{display:block;margin:0;font-size:.95rem}td.rc b{font-size:.98rem;letter-spacing:-.02em}td.rc small{display:block;font-size:.7rem;color:inherit;opacity:.9}
+@media(prefers-color-scheme:dark){td.rc{background:var(--hd)}}
+td.rc.dark{background:color-mix(in srgb,var(--h) 42%,var(--panel));color:var(--text)}
+@media(prefers-color-scheme:dark){td.rc.dark{background:color-mix(in srgb,var(--hd) 45%,var(--panel))}}
+td.rc.none{background:var(--row);color:var(--muted)}
+.best{font-size:.84rem;margin-top:8px;color:var(--muted)}.best b{color:var(--text)}.best .d{color:var(--accent);font-weight:700;letter-spacing:.04em}
+.days{display:grid;grid-template-columns:repeat(auto-fit,minmax(330px,1fr));gap:10px;margin-top:8px}
+.panel{background:var(--row);border-radius:12px;padding:9px 11px;border:1px solid var(--border)}
+.ph{display:flex;justify-content:space-between;align-items:baseline;gap:8px}
+.ptitle{font-size:1.05rem;font-weight:800;letter-spacing:-.02em}.ptitle em{font-style:normal;color:var(--accent);font-size:.74rem;letter-spacing:.12em;margin-right:5px}
+.plinks{display:flex;flex-wrap:wrap;gap:6px 18px;margin-top:4px;align-items:center}.rt2{text-align:right;line-height:1}.big{font-size:1.6rem;font-weight:700;letter-spacing:-.03em;line-height:1}.scoresm{font-size:.76rem;font-weight:700;margin-top:3px}.scoresm.good{color:var(--good)}.scoresm.ok{color:var(--fair)}.scoresm.bad{color:var(--poor)}
+.sum{margin:3px 0 5px;font-size:.88rem}.sum b{font-weight:600}.sum span{color:var(--muted)}
+.pack{display:flex;flex-wrap:wrap;gap:4px;margin:2px 0 5px}.pk{background:var(--chip);border-radius:999px;padding:1px 10px;font-size:.78rem}
+.sl{display:grid;grid-template-columns:3.8rem 2.2rem 1fr auto;align-items:center;gap:4px;padding:3px 6px;border-top:1px solid var(--border);font-size:.82rem}
+.sl.best{background:var(--chip);border-radius:8px;border-top-color:transparent;margin:0;color:var(--text)}.sl .ic{margin:0;white-space:nowrap;font-size:1rem}
+.sl .bc,.sl .mut{white-space:nowrap}.sl .sb+b{font-size:.74rem;font-weight:600;color:var(--muted)}.sl .tt{font-size:.98rem;color:var(--text);font-weight:700;letter-spacing:-.02em}.obs2{font-size:.76rem;color:var(--muted);padding:0 6px 2px}
+table.strip{table-layout:fixed;min-width:460px;border-collapse:separate;border-spacing:2px}
+.strip th.rowh{width:5.6rem;text-transform:none;letter-spacing:0;font-size:.82rem;color:var(--text);border:0;text-align:left;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;position:sticky;left:0;background:var(--panel);z-index:1}
+.strip th.wh{text-align:center;border:0;padding:1px 0}.strip th.wh small{display:block;font-size:.72rem;font-weight:500;letter-spacing:0}.strip th.wh.we{color:var(--accent)}
+.strip td{padding:1px;border:0;font-size:.8rem}.wcell{text-align:center;border-radius:8px;line-height:1.05;background:var(--row)}
+.wcell .ic{display:block;margin:0;font-size:.95rem}.wcell b{font-size:.95rem;letter-spacing:-.02em}.wcell small{display:block;font-size:.7rem;color:var(--text);opacity:.82}.wcell.good{background:rgba(29,122,107,.16)}
+.wcell.ok{background:rgba(178,80,0,.16)}.wcell.bad{background:rgba(196,39,30,.16)}td.wavg{text-align:center;font-weight:700;color:var(--muted)}
+.slim{font-size:.86rem}.statline{display:flex;flex-wrap:wrap;gap:2px 14px;color:var(--muted);font-size:.8rem}.statline b{color:var(--text);font-weight:600}
+details{margin-top:6px}summary{cursor:pointer;color:var(--accent);font-size:.84rem;font-weight:600;padding:6px 0}
+.legend{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:2px 10px;font-size:.78rem;margin-top:6px}.legend .ic{font-size:.95rem}
+footer{padding:6px 0 calc(18px + env(safe-area-inset-bottom));color:var(--muted);font-size:.78rem}footer p{margin:2px 0}
+.trend{width:100%;height:auto;margin-top:8px}.trend .gr{stroke:var(--border);stroke-width:1}.trend .ax{fill:var(--muted);font-size:9px}
+.trend polyline{fill:none;stroke-width:2.2;stroke-linejoin:round}.trend .lf{stroke:var(--accent)}.trend .lo{stroke:var(--good)}
+.legend2{display:flex;gap:14px;font-size:.8rem;color:var(--muted)}.legend2 i{display:inline-block;width:12px;height:3px;margin-right:5px;vertical-align:middle}
+.legend2 .lf{background:var(--accent)}.legend2 .lo{background:var(--good)}small.dl{font-weight:700}small.dl.good{color:var(--good)}small.dl.ok{color:var(--fair)}small.dl.bad{color:var(--poor)}
+@media(max-width:700px){.rib{flex-direction:column;gap:8px}.rday{width:100%}.rday:not(:first-child) .rowh{display:table-cell}
+.sl{grid-template-columns:3.4rem 2.5rem 1fr auto;gap:3px;padding:3px 4px}.sl .sb{width:28px;margin-right:4px}.sl .tt{font-size:.92rem}
+table.rt{width:calc(var(--n)*21% + 6rem);max-width:100%}.rt th.rowh{width:6rem;font-size:.78rem}
+table.strip{min-width:0}.strip th.rowh{width:5.3rem;font-size:.74rem;padding:0 4px 0 0}.strip .wavg{display:none}.strip td{font-size:.74rem}.wcell b{font-size:.88rem}
+.nav{-webkit-mask-image:linear-gradient(to right,#000 80%,transparent);mask-image:linear-gradient(to right,#000 80%,transparent)}.nav::after{content:"";flex:none;width:36px}
+.rdh{text-align:left}.kpis{display:grid;grid-template-columns:repeat(2,1fr);gap:8px;width:100%}.kpi{text-align:left}.kpi b{font-size:1.2rem}.kpi small{max-width:none}.days{grid-template-columns:1fr}.hdrow{gap:8px}.lead{font-size:.86rem}.chip{padding:6px 12px}}
+@page{size:A4;margin:8mm}
+@media print{.hd{position:static;backdrop-filter:none;border:0}.nav,.legend,#places{display:none}body{background:#fff;font-size:11px}.wrap{max-width:none;padding:0 6px}
+.card{box-shadow:none;margin:6px 0;padding:6px 10px}.panel,.rday,.strip{break-inside:avoid}.days{grid-template-columns:repeat(3,1fr)}.rib{flex-direction:row}
+.rday:not(:first-child) .rowh{display:none}details>*:not(summary){display:block}}
+</style></head><body><header class='hd'><div class='wrap hdrow'><span class='logo'>W</span><h1>WETTER</h1></div></header><div class='wrap intro'><div class='lead'>Weekend hike forecast for Hamburg, Travemünde and Kiel. Fixed rules, no AI, no trackers.</div><div class='meta'><b>7 Nov 2026</b> &middot; last run <b>7 Nov 2026, 14:00 CET</b> &middot; runs every 30 min &middot; v1.0.0</div><div class='how'><span><i class='dot good'></i> Go: dry, light wind</span><span><i class='dot fair'></i> Dress for it: gusts 30&ndash;40 km/h</span><span><i class='dot poor'></i> Skip: rain, or gusts over 40 km/h</span><span>Score 0&ndash;100</span></div></div><main class='wrap'><div class='card'><div class='ch'><div><h2>Forecast vs observed, per day</h2><div class='sub'>Day score (half average, half worst slot), mean of all locations. The forecast is the last one issued before each slot began.</div></div><div class='kpis'><div class='kpi'><b>4</b><small>days with observations</small></div><div class='kpi'><b>12.4</b><small>avg score error (pts)</small></div><div class='kpi'><b>75%</b><small>days within 10 points</small></div></div></div><svg viewBox='0 0 600 170' class='trend' role='img' aria-label='Forecast and observed score per day'><line x1='28' x2='592' y1='148.0' y2='148.0' class='gr'/><text x='2' y='151.0' class='ax'>0</text><line x1='28' x2='592' y1='113.0' y2='113.0' class='gr'/><text x='2' y='116.0' class='ax'>25</text><line x1='28' x2='592' y1='78.0' y2='78.0' class='gr'/><text x='2' y='81.0' class='ax'>50</text><line x1='28' x2='592' y1='43.0' y2='43.0' class='gr'/><text x='2' y='46.0' class='ax'>75</text><line x1='28' x2='592' y1='8.0' y2='8.0' class='gr'/><text x='2' y='11.0' class='ax'>100</text><polyline class='lf' points='28.0,43.0 216.0,23.9 404.0,15.0 592.0,29.0'/><polyline class='lo' points='28.0,80.8 216.0,33.7 404.0,22.9 592.0,43.0'/><text x='28' y='164' class='ax'>3 Nov</text><text x='592' y='164' class='ax' text-anchor='end'>6 Nov</text></svg><div class='legend2'><span><i class='lf'></i> Forecast score</span><span><i class='lo'></i> Observed score</span></div></div><div class='card'><h2>Day by day</h2><div class='sub'>Score forecast &rarr; observed (change), observed rain and gust. Snapshot = the page as published on the morning of that day (kept 60 days).</div><div class='sc'><table><tr><th>Day</th><th>Hamburg <span style='text-transform:none;letter-spacing:0'>forecast &rarr; observed</span></th><th>Travemünde <span style='text-transform:none;letter-spacing:0'>forecast &rarr; observed</span></th><th>Kiel <span style='text-transform:none;letter-spacing:0'>forecast &rarr; observed</span></th><th>Page</th></tr><tr><td class='num'><b>Fri 6 Nov 2026</b></td><td class='num'>81 &rarr; <b>75</b> <small class='dl good'>-6</small><br><small>0.0 mm, gust 30</small></td><td class='num'>85 &rarr; <b>65</b> <small class='dl ok'>-20</small><br><small>0.0 mm, gust 34</small></td><td class='num'>89 &rarr; <b>85</b> <small class='dl good'>-4</small><br><small>0.0 mm, gust 24</small></td><td><a href='2026-11-06.html'>snapshot</a></td></tr><tr><td class='num'><b>Thu 5 Nov 2026</b></td><td class='num'>95 &rarr; <b>80</b> <small class='dl ok'>-15</small><br><small>0.0 mm, gust 31</small></td><td class='num'>95 &rarr; <b>95</b> <small class='dl good'>+0</small><br><small>0.0 mm, gust 13</small></td><td class='num'>95 &rarr; <b>93</b> <small class='dl good'>-2</small><br><small>0.0 mm, gust 14</small></td><td><a href='2026-11-05.html'>snapshot</a></td></tr><tr><td class='num'><b>Wed 4 Nov 2026</b></td><td class='num'>88 &rarr; <b>78</b> <small class='dl good'>-10</small><br><small>0.0 mm, gust 31</small></td><td class='num'>90 &rarr; <b>85</b> <small class='dl good'>-5</small><br><small>0.0 mm, gust 26</small></td><td class='num'>88 &rarr; <b>82</b> <small class='dl good'>-6</small><br><small>0.0 mm, gust 29</small></td><td><a href='2026-11-04.html'>snapshot</a></td></tr><tr><td class='num'><b>Tue 3 Nov 2026</b></td><td class='num'>94 &rarr; <b>64</b> <small class='dl bad'>-30</small><br><small>0.3 mm, gust 21</small></td><td class='num'>71 &rarr; <b>44</b> <small class='dl bad'>-27</small><br><small>0.3 mm, gust 35</small></td><td class='num'>60 &rarr; <b>36</b> <small class='dl ok'>-24</small><br><small>0.1 mm, gust 38</small></td><td><a href='2026-11-03.html'>snapshot</a></td></tr></table></div></div><p class='sub'><a href='../index.html'>&larr; Back to the live forecast</a></p></main><footer class='wrap'><p><a href='https://www.dwd.de/DE/wetter/warnungen/warnWetter_node.html'>Official weather warnings (DWD)</a></p><p>Weather data: Open-Meteo.com (CC BY 4.0), DWD. Observations via Bright Sky (DWD open data). Personal, non-commercial.</p></footer></body></html>
